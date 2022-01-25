@@ -34,6 +34,46 @@ const data = {
       meta: "(medium apples, cinnamon, milk, vanilla)",
     },
   ],
+  testimo: [
+    {
+      feedback: "Maecenas nulla massa sit in. Turpis eu orci nisl ullamcorper consectetur placerat eget urna, cum. Facilisi gravida velit.",
+      name: "Cameron Williamson",
+    },
+    {
+      feedback: "Maecenas nulla massa sit in. Turpis eu orci nisl ullamcorper consectetur placerat eget urna, cum. Facilisi gravida velit.",
+      name: "Thomas Edition",
+    },
+    {
+      feedback: "Maecenas nulla massa sit in. Turpis eu orci nisl ullamcorper consectetur placerat eget urna, cum. Facilisi gravida velit.",
+      name: "Sun System",
+    },
+  ],
+  client: [
+    {
+      src: "../images/about-img08.jpg",
+      alt: "logo client"
+    },
+    {
+      src: "../images/about-img09.jpg",
+      alt: "logo client"
+    },
+    {
+      src: "../images/about-img08.jpg",
+      alt: "logo client"
+    },
+    {
+      src: "../images/about-img09.jpg",
+      alt: "logo client"
+    },
+    {
+      src: "../images/about-img09.jpg",
+      alt: "logo client"
+    },
+    {
+      src: "../images/about-img08.jpg",
+      alt: "logo client"
+    },
+  ]
 };
 
 function aboutRender() {
@@ -47,6 +87,8 @@ function aboutRender() {
   root.innerHTML += sectionClient();
   root.innerHTML += footer();
   aboutListMenu();
+  aboutTestimo();
+  aboutClientLogo();
 }
 
 function header() {
@@ -179,75 +221,41 @@ function sectionTestimo() {
             <h6 class="heading">WHAT PEOPLE SAY</h6>
             <h3>Testimonials</h3>
         </div>
-        <div class="row">
-            <div class="col-4 col-s-6">
-                <div class="testimonials-item">
-                    <div class="user">
-                        <i class="far fa-user"></i>
-                    </div>
-                    <div class="text">
-                        Maecenas nulla massa sit in. Turpis eu orci nisl ullamcorper consectetur placerat eget urna,
-                        cum. Facilisi gravida velit.
-                    </div>
-                    <div class="name">
-                        Cameron Williamson
-                    </div>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="col-4 col-s-6">
-                <div class="testimonials-item">
-                    <div class="user">
-                        <i class="far fa-user"></i>
-                    </div>
-                    <div class="text">
-                        Maecenas nulla massa sit in. Turpis eu orci nisl ullamcorper consectetur placerat eget urna,
-                        cum. Facilisi gravida velit.
-                    </div>
-                    <div class="name">
-                        Cameron Williamson
-                    </div>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="col-4 col-s-6">
-                <div class="testimonials-item">
-                    <div class="user">
-                        <i class="far fa-user"></i>
-                    </div>
-                    <div class="text">
-                        Maecenas nulla massa sit in. Turpis eu orci nisl ullamcorper consectetur placerat eget urna,
-                        cum. Facilisi gravida velit.
-                    </div>
-                    <div class="name">
-                        Cameron Williamson
-                    </div>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                </div>
-            </div>
+        <div class="row" id="testimoItem">
+            
         </div>
     </div>
     </section>
     `;
   return sectionTestimo;
+}
+
+function aboutTestimo() {
+    let testimoItem = document.getElementById("testimoItem");
+    data.testimo.forEach(e=> {
+      testimoItem.innerHTML += `
+      <div class="col-4 col-s-6">
+      <div class="testimonials-item">
+          <div class="user">
+              <i class="far fa-user"></i>
+          </div>
+          <div class="text">
+              ${e.feedback}
+          </div>
+          <div class="name">
+              ${e.name}
+          </div>
+          <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+          </div>
+      </div>
+     </div>
+      `
+    })
 }
 
 function sectionMission() {
@@ -293,28 +301,8 @@ function sectionClient() {
             </div>
             <div class="col-8 col-s-8">
                 <div class="client-branch">
-                    <div class="row">
-                        <div class="col-3 col-s-4 col-m-6">
-                            <img src="../images/about-img08.jpg" alt="" class="w-100">
-                        </div>
-                        <div class="col-3 col-s-4 col-m-6">
-                            <img src="../images/about-img09.jpg" alt="" class="w-100">
-                        </div>
-                        <div class="col-3 col-s-4 col-m-6">
-                            <img src="../images/about-img08.jpg" alt="" class="w-100">
-                        </div>
-                        <div class="col-3 col-s-4 col-m-6">
-                            <img src="../images/about-img09.jpg" alt="" class="w-100">
-                        </div>
-                        <div class="col-3 col-s-4 col-m-6">
-                            <img src="../images/about-img08.jpg" alt="" class="w-100">
-                        </div>
-                        <div class="col-3 col-s-4 col-m-6">
-                            <img src="../images/about-img08.jpg" alt="" class="w-100">
-                        </div>
-                        <div class="col-3 col-s-4 col-m-6">
-                            <img src="../images/about-img09.jpg" alt="" class="w-100">
-                        </div>
+                    <div class="row" id="logoClient">
+                       
                     </div>
                 </div>
             </div>
@@ -323,5 +311,16 @@ function sectionClient() {
     </section>
     `;
   return sectionClient;
+}
+
+function aboutClientLogo() {
+  let logoClient = document.getElementById("logoClient");
+  data.client.forEach(e=> {
+    logoClient.innerHTML += `
+    <div class="col-3 col-s-4 col-m-6">
+      <img src="${e.src}" alt="${e.alt}" class="w-100">
+    </div>
+    `
+  })
 }
 aboutRender();
