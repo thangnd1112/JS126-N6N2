@@ -1,4 +1,5 @@
 const root = document.getElementById("root");
+// object chứa thông tin bánh, khách hàng feedback
 const data = {
   images: {
     img01: {
@@ -6,6 +7,33 @@ const data = {
       alt: "Cream Cake",
     },
   },
+  cakes: [
+    {
+      name: "Heart Cookies",
+      price: "15$",
+      meta: "(eggs, milk, sugar, vanilla)",
+    },
+    {
+      name: "Macaroons",
+      price: "15$",
+      meta: "(sugar, vanilla extract, almond flour)",
+    },
+    {
+      name: "White cake",
+      price: "27$",
+      meta: "(eggs, white sugar, milk)",
+    },
+    {
+      name: "Chocolate Chip cookies",
+      price: "27$",
+      meta: "(brown sugar, eggs, chocolate)",
+    },
+    {
+      name: "Apple Crumble Cake",
+      price: "27$",
+      meta: "(medium apples, cinnamon, milk, vanilla)",
+    },
+  ],
 };
 
 function aboutRender() {
@@ -18,6 +46,7 @@ function aboutRender() {
   root.innerHTML += sectionMission();
   root.innerHTML += sectionClient();
   root.innerHTML += footer();
+  aboutListMenu();
 }
 
 function header() {
@@ -102,10 +131,8 @@ function sectionTeam() {
   return sectionTeam;
 }
 
-
-
 function sectionMenu() {
-    let sectionMenu = `
+  let sectionMenu = `
     <section class="menu">
     <div class="row">
         <div class="col-6">
@@ -117,74 +144,35 @@ function sectionMenu() {
             <div class="menu-list text-center">
                 <h6 class="heading">FROM OUR MENU</h6>
                 <h3>Today’s specials</h3>
-                <div class="menu-item">
-                    <div class="wrapper">
-                        <div class="menu-item-list">
-                            <div class="title">HEART COOKIES</div>
-                            <div class="divider"></div>
-                            <div class="price">15$</div>
-                        </div>
-                        <div class="menu-item-detail">(eggs, milk, sugar, vanilla)</div>
-                    </div>
-                    <div class="wrapper">
-                        <div class="menu-item-list">
-                            <div class="title">HEART COOKIES</div>
-                            <div class="divider"></div>
-                            <div class="price">15$</div>
-                        </div>
-                        <div class="menu-item-detail">(eggs, milk, sugar, vanilla)</div>
-                    </div>
-                    <div class="wrapper">
-                        <div class="menu-item-list">
-                            <div class="title">HEART COOKIES</div>
-                            <div class="divider"></div>
-                            <div class="price">15$</div>
-                        </div>
-                        <div class="menu-item-detail">(eggs, milk, sugar, vanilla)</div>
-                    </div>
-                    <div class="wrapper">
-                        <div class="menu-item-list">
-                            <div class="title">HEART COOKIES</div>
-                            <div class="divider"></div>
-                            <div class="price">15$</div>
-                        </div>
-                        <div class="menu-item-detail">(eggs, milk, sugar, vanilla)</div>
-                    </div>
-                    <div class="wrapper">
-                        <div class="menu-item-list">
-                            <div class="title">HEART COOKIES</div>
-                            <div class="divider"></div>
-                            <div class="price">15$</div>
-                        </div>
-                        <div class="menu-item-detail">(eggs, milk, sugar, vanilla)</div>
-                    </div>
-                    <div class="wrapper">
-                        <div class="menu-item-list">
-                            <div class="title">HEART COOKIES</div>
-                            <div class="divider"></div>
-                            <div class="price">15$</div>
-                        </div>
-                        <div class="menu-item-detail">(eggs, milk, sugar, vanilla)</div>
-                    </div>
-                    <div class="wrapper">
-                        <div class="menu-item-list">
-                            <div class="title">HEART COOKIES</div>
-                            <div class="divider"></div>
-                            <div class="price">15$</div>
-                        </div>
-                        <div class="menu-item-detail">(eggs, milk, sugar, vanilla)</div>
-                    </div>
+                <div class="menu-item" id="menuItem">
+                    
                 </div>
             </div>
         </div>
     </div>
     </section>
     `;
-    return sectionMenu;
+  return sectionMenu;
+}
+
+function aboutListMenu() {
+  let menuItem = document.getElementById("menuItem");
+  data.cakes.forEach((e) => {
+    menuItem.innerHTML += `
+      <div class="wrapper">
+      <div class="menu-item-list">
+          <div class="title">${e.name}</div>
+          <div class="divider"></div>
+          <div class="price">${e.price}</div>
+      </div>
+      <div class="menu-item-detail">${e.meta}</div>
+     </div>
+      `;
+  });
 }
 
 function sectionTestimo() {
-    let sectionTestimo = `
+  let sectionTestimo = `
     <section class="testimonials">
     <div class="container">
         <div class="heading">
@@ -259,11 +247,11 @@ function sectionTestimo() {
     </div>
     </section>
     `;
-    return sectionTestimo;
+  return sectionTestimo;
 }
 
 function sectionMission() {
-    let sectionMission = `
+  let sectionMission = `
     <section class="mission">
     <div class="row">
         <div class="col-4 col-s-4">
@@ -286,12 +274,11 @@ function sectionMission() {
     </div>
     </section>
     `;
-    return sectionMission;
+  return sectionMission;
 }
 
-
 function sectionClient() {
-    let sectionClient = `
+  let sectionClient = `
     <section class="client">
     <div class="container">
         <div class="row">
@@ -335,6 +322,6 @@ function sectionClient() {
     </div>
     </section>
     `;
-    return sectionClient;
+  return sectionClient;
 }
 aboutRender();

@@ -129,7 +129,7 @@ h3 {
   padding-top: 30px;
 }
 
-.menu-item::after {
+.menu-item .wrapper::after {
   content: "";
   height: 1px;
   width: 50px;
@@ -161,7 +161,8 @@ h3 {
   padding: 15px 0;
 }
 
-.mission .row, .mission .col-4 {
+.mission .row,
+.mission .col-4 {
   margin: 0;
   padding: 0;
 }
@@ -280,11 +281,14 @@ h3 {
   .menu-item .wrapper {
     padding: 15px 0px;
   }
+  .menu-item .wrapper::after {
+    display: none;
+  }
   .menu .divider {
     background: black;
     height: 1px;
-    max-width: 200px;
     width: 100%;
+    margin: 0 20px;
   }
   .mission .text {
     padding: 20px;
