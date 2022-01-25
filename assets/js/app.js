@@ -2,7 +2,7 @@ const main = document.getElementById("main");
 
 const menu = [
 	{ key: "home", label: "Home" },
-	{ key: "about", label: "About" },
+	{ key: "about", label: "About", src:"assets/pages/about.html" },
 	{ key: "team", label: "Team" },
 	{ key: "menu", label: "Menu" },
 	{ key: "shop", label: "Shop" },
@@ -66,7 +66,7 @@ function renderHeader () {
 	const header = document.getElementById("menu-container");
 
 	for (let item of menu) {
-		header.innerHTML += `<span class="menu-item cursor-pointer">${item.label}</span>`;
+		header.innerHTML += `<a class="menu-item" href="${item.src}"><span class="menu-item cursor-pointer">${item.label}</span></a>`;
 	}
 }
 
