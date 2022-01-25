@@ -1,0 +1,340 @@
+const root = document.getElementById("root");
+const data = {
+  images: {
+    img01: {
+      src: "../images/img01.jpg",
+      alt: "Cream Cake",
+    },
+  },
+};
+
+function aboutRender() {
+  // const about = `<div class="about"></div>`;
+  root.innerHTML = header();
+  root.innerHTML += sectionAbout();
+  root.innerHTML += sectionTeam();
+  root.innerHTML += sectionMenu();
+  root.innerHTML += sectionTestimo();
+  root.innerHTML += sectionMission();
+  root.innerHTML += sectionClient();
+  root.innerHTML += footer();
+}
+
+function header() {
+  return `<div>Header</div>`;
+}
+
+function footer() {
+  return `<div>Footers</div>`;
+}
+
+function sectionAbout() {
+  let sectionAbout = `
+    <section class="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-6 col-s-6 col-l-5">
+                <div class="about-img">
+                    <img class="w-100" src="../images/img01.jpg" alt="Cream Cake">
+                </div>
+            </div>
+            <div class="col-6 col-s-6">
+                <div class="about-text">
+                    <h6 class="heading">who we are</h6>
+                    <h2>We offer a wide variety of celebration cakes for birthdays, graduation parties, and other
+                        types of events.</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    `;
+  return sectionAbout;
+}
+
+function sectionTeam() {
+  let sectionTeam = `
+    <section class="team">
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <div class="team-text">
+                    <div class="heading">
+                        <h6 class="heading">who we are</h6>
+                        <h3>Our great team</h3>
+                    </div>
+                    <p>Viverra risus turpis consequat velit ultrices maecenas congue mi. Egestas orci eu eget tellus
+                        morbi. Odio cras tellus ut duis tristique.</p>
+                </div>
+            </div>
+            <div class="col-8">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="team-member">
+                            <img class="w-100" src="../images/about-img03.jpg" alt="image">
+                            <div class="team-member-info">
+                                <h6 class="heading">Jenny Wilson</h6>
+                                <p class="team-member-title">Head Chef</p>
+                                <i class="fab fa-facebook-f"></i>
+                                <i class="fab fa-instagram"></i>
+                                <i class="fab fa-twitter"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="team-member">
+                            <img class="w-100" src="../images/about-img02.jpg" alt="image">
+                            <div class="team-member-info">
+                                <h6 class="heading">Jenny Wilson</h6>
+                                <p class="team-member-title">Head Chef</p>
+                                <i class="fab fa-facebook-f"></i>
+                                <i class="fab fa-instagram"></i>
+                                <i class="fab fa-twitter"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    `;
+  return sectionTeam;
+}
+
+
+
+function sectionMenu() {
+    let sectionMenu = `
+    <section class="menu">
+    <div class="row">
+        <div class="col-6">
+            <div class="menu-img">
+                <img src="../images/about-img05.jpg" class="w-100" alt="">
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="menu-list text-center">
+                <h6 class="heading">FROM OUR MENU</h6>
+                <h3>Today’s specials</h3>
+                <div class="menu-item">
+                    <div class="wrapper">
+                        <div class="menu-item-list">
+                            <div class="title">HEART COOKIES</div>
+                            <div class="divider"></div>
+                            <div class="price">15$</div>
+                        </div>
+                        <div class="menu-item-detail">(eggs, milk, sugar, vanilla)</div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="menu-item-list">
+                            <div class="title">HEART COOKIES</div>
+                            <div class="divider"></div>
+                            <div class="price">15$</div>
+                        </div>
+                        <div class="menu-item-detail">(eggs, milk, sugar, vanilla)</div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="menu-item-list">
+                            <div class="title">HEART COOKIES</div>
+                            <div class="divider"></div>
+                            <div class="price">15$</div>
+                        </div>
+                        <div class="menu-item-detail">(eggs, milk, sugar, vanilla)</div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="menu-item-list">
+                            <div class="title">HEART COOKIES</div>
+                            <div class="divider"></div>
+                            <div class="price">15$</div>
+                        </div>
+                        <div class="menu-item-detail">(eggs, milk, sugar, vanilla)</div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="menu-item-list">
+                            <div class="title">HEART COOKIES</div>
+                            <div class="divider"></div>
+                            <div class="price">15$</div>
+                        </div>
+                        <div class="menu-item-detail">(eggs, milk, sugar, vanilla)</div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="menu-item-list">
+                            <div class="title">HEART COOKIES</div>
+                            <div class="divider"></div>
+                            <div class="price">15$</div>
+                        </div>
+                        <div class="menu-item-detail">(eggs, milk, sugar, vanilla)</div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="menu-item-list">
+                            <div class="title">HEART COOKIES</div>
+                            <div class="divider"></div>
+                            <div class="price">15$</div>
+                        </div>
+                        <div class="menu-item-detail">(eggs, milk, sugar, vanilla)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    `;
+    return sectionMenu;
+}
+
+function sectionTestimo() {
+    let sectionTestimo = `
+    <section class="testimonials">
+    <div class="container">
+        <div class="heading">
+            <h6 class="heading">WHAT PEOPLE SAY</h6>
+            <h3>Testimonials</h3>
+        </div>
+        <div class="row">
+            <div class="col-4 col-s-6">
+                <div class="testimonials-item">
+                    <div class="user">
+                        <i class="far fa-user"></i>
+                    </div>
+                    <div class="text">
+                        Maecenas nulla massa sit in. Turpis eu orci nisl ullamcorper consectetur placerat eget urna,
+                        cum. Facilisi gravida velit.
+                    </div>
+                    <div class="name">
+                        Cameron Williamson
+                    </div>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 col-s-6">
+                <div class="testimonials-item">
+                    <div class="user">
+                        <i class="far fa-user"></i>
+                    </div>
+                    <div class="text">
+                        Maecenas nulla massa sit in. Turpis eu orci nisl ullamcorper consectetur placerat eget urna,
+                        cum. Facilisi gravida velit.
+                    </div>
+                    <div class="name">
+                        Cameron Williamson
+                    </div>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 col-s-6">
+                <div class="testimonials-item">
+                    <div class="user">
+                        <i class="far fa-user"></i>
+                    </div>
+                    <div class="text">
+                        Maecenas nulla massa sit in. Turpis eu orci nisl ullamcorper consectetur placerat eget urna,
+                        cum. Facilisi gravida velit.
+                    </div>
+                    <div class="name">
+                        Cameron Williamson
+                    </div>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    `;
+    return sectionTestimo;
+}
+
+function sectionMission() {
+    let sectionMission = `
+    <section class="mission">
+    <div class="row">
+        <div class="col-4 col-s-4">
+            <img src="../images/about-img06.jpg" alt="" class="w-100">
+        </div>
+        <div class="col-4 col-s-4">
+            <div class="mission-text">
+                <h3>Our mission is to bake with passion</h3>
+                <div class="text">
+                    Est netus turpis at habitant vitae id enim eget. Urna pellentesque nunc est arcu et. Aliquam erat augue integer tortor. Erat eget condimentum.
+                </div>
+                <div class="menu">
+                    <a href="#">Menu</a> <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col-4 col-s-4">
+            <img src="../images/about-img07.jpg" alt="" class="w-100">
+        </div>
+    </div>
+    </section>
+    `;
+    return sectionMission;
+}
+
+
+function sectionClient() {
+    let sectionClient = `
+    <section class="client">
+    <div class="container">
+        <div class="row">
+            <div class="col-4 col-s-4">
+                <div class="heading">
+                    <h6 class="heading">CLIENTS</h6>
+                    <h3>Trustworthy partners</h3>
+                </div>
+                <div class="text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit sum sollicitudin massa in finibus gravida.
+                </div>
+            </div>
+            <div class="col-8 col-s-8">
+                <div class="client-branch">
+                    <div class="row">
+                        <div class="col-3 col-s-4 col-m-6">
+                            <img src="../images/about-img08.jpg" alt="" class="w-100">
+                        </div>
+                        <div class="col-3 col-s-4 col-m-6">
+                            <img src="../images/about-img09.jpg" alt="" class="w-100">
+                        </div>
+                        <div class="col-3 col-s-4 col-m-6">
+                            <img src="../images/about-img08.jpg" alt="" class="w-100">
+                        </div>
+                        <div class="col-3 col-s-4 col-m-6">
+                            <img src="../images/about-img09.jpg" alt="" class="w-100">
+                        </div>
+                        <div class="col-3 col-s-4 col-m-6">
+                            <img src="../images/about-img08.jpg" alt="" class="w-100">
+                        </div>
+                        <div class="col-3 col-s-4 col-m-6">
+                            <img src="../images/about-img08.jpg" alt="" class="w-100">
+                        </div>
+                        <div class="col-3 col-s-4 col-m-6">
+                            <img src="../images/about-img09.jpg" alt="" class="w-100">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    `;
+    return sectionClient;
+}
+aboutRender();
