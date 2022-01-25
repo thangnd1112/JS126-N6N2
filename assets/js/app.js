@@ -77,7 +77,7 @@ function renderFooter () {
 				<div class="col-lg-3 footer-item-grid">
 					<div>
 						<div class="footer-logo-item">
-							<img src="/static/img/logo-light-180x180.png" width=105 />
+							<img src="static/img/logo-light-180x180.png" width=105 />
 						</div>
 						<div class="footer-logo-item">
 							<p>Beans is the #1 local and family-owned cake shop & bakery aimed at making cakes that create long-lasting memories.</p>
@@ -87,7 +87,7 @@ function renderFooter () {
 				<div class="col-lg-3 footer-item-grid footer-contact">
 					<div class="flex contact-item">
 						<div class="footer-icon">
-							<img src="/static/img/location.png" />
+							<img src="static/img/location.png" />
 						</div>
 						<div>
 							2130 Fulton Street,
@@ -97,7 +97,7 @@ function renderFooter () {
 					</div>
 					<div class="flex contact-item">
 						<div class="footer-icon">
-							<img src="/static/img/phone.png" />
+							<img src="static/img/phone.png" />
 						</div>
 						<div>
 							Call Us: 800-123-4567
@@ -105,7 +105,7 @@ function renderFooter () {
 					</div>
 					<div class="flex contact-item">
 						<div class="footer-icon">
-							<img src="/static/img/email.png" />
+							<img src="static/img/email.png" />
 						</div>
 						<div>
 							Send us an email
@@ -117,9 +117,9 @@ function renderFooter () {
 				<div class="flex-between">
 					<div>© 2022 Beans. All Rights Reserved. Privacy Policy</div>
 					<div>
-						<span class="social-icon"><img src="/static/img/fb.png" width=20 /></span>
-						<span class="social-icon"><img src="/static/img/ytb.png" width=20 /></span>
-						<span class="social-icon"><img src="/static/img/insta.png" width=20 /></span>
+						<span class="social-icon"><img src="static/img/fb.png" width=20 /></span>
+						<span class="social-icon"><img src="static/img/ytb.png" width=20 /></span>
+						<span class="social-icon"><img src="static/img/insta.png" width=20 /></span>
 					</div>			
 				</div>
 			</div>
